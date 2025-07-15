@@ -1,0 +1,111 @@
+:root {
+  /* Color Variables */
+  --primary: #2A5CAA;
+  --primary-light: #3a6cba;
+  --primary-dark: #1a4c9a;
+  --primary-soft: rgba(42, 92, 170, 0.1);
+  --secondary: #28A745;
+  --dark: #343A40;
+  --light: #F8F9FA;
+  --white: #ffffff;
+  --gray: #6C757D;
+  
+  /* Font */
+  --font-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+/* Text Colors */
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+
+/* Background Colors */
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.bg-light { background-color: var(--light) !important; }
+.bg-dark { background-color: var(--dark) !important; }
+.bg-primary-light { background-color: var(--primary-light) !important; }
+.bg-primary-soft { background-color: var(--primary-soft) !important; }
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(42, 92, 170, 0.8), rgba(42, 92, 170, 0.9)), 
+              url('../assets/hero-cover.jpg') center/cover no-repeat;
+  color: white;
+  padding: 6rem 0;
+}
+
+/* Icon Box */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 0.5rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Testimonial Cards */
+.bg-primary-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  z-index: 99;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
