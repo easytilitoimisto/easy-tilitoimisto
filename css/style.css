@@ -1,8 +1,8 @@
 :root {
   /* Color Variables */
-  --primary: #2A5CAA;
-  --primary-light: #3a6cba;
-  --primary-dark: #1a4c9a;
+  --primary: rgba(13, 110, 253, 0.9);
+  --primary-light: rgba(78, 140, 234, 0.9);
+  --primary-dark: rgba(9, 61, 140, 0.9);
   --primary-soft: rgba(42, 92, 170, 0.1);
   --secondary: #28A745;
   --dark: #343A40;
@@ -108,4 +108,100 @@ body {
   .display-4 {
     font-size: 2.5rem;
   }
+}
+
+
+/* Service card hover effect */
+.hover-shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Icon box styling */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Contact page specific styles */
+.contact-header {
+  background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.9)), 
+              url('../assets/contact-bg.jpg') center/cover;
+}
+
+#map {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Form validation styling */
+.was-validated .form-control:valid, 
+.was-validated .form-control:invalid {
+  background-position: right calc(0.375em + 0.1875rem) center;
+}
+
+/* Pricing page specific styles */
+.pricing-header {
+  background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.9)), 
+              url('../assets/pricing-bg.jpg') center/cover;
+}
+
+/* Plan card hover effects */
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Featured plan styling */
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+}
+
+/* Pricing toggle active state */
+.btn-check:checked + .btn-outline-primary {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* About page specific styles */
+.about-header {
+  background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.9)), 
+              url('../assets/about-bg.jpg') center/cover;
+}
+
+/* Team member cards */
+.team-card {
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Client logo styling */
+.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+.grayscale:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Values icon boxes */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.75rem;
 }

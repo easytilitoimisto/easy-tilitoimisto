@@ -1,93 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact – Easy Tilitoimisto</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Easy Tilitoimisto for accounting services in Finland. Book consultations, ask questions, or visit our office.">
+  <title>Contact Us | Easy Tilitoimisto</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="css/style.css" as="style">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico">
+  
+  <!-- Mapbox CSS (for embedded map) -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
 </head>
-<body class="bg-light text-dark">
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top px-3">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold text-success" href="index.html">
-      Easy Tilitoimisto
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav me-3">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">🏠 Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">📘 Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pricing.html">💰 Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">📞 Contact</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            🌐 Language
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/en/index.html">🇬🇧 English</a></li>
-            <li><a class="dropdown-item" href="/fi/index.html">🇫🇮 Suomi</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-  <div class="container py-5">
-    <h1 class="text-center mb-4">📞 Contact Us</h1>
-    <p class="text-center lead mb-5">Let's talk about how we can support your business needs.</p>
-
-    <div class="row g-4">
-      <div class="col-md-6">
-        <h5>📍 Address</h5>
-        <p>100% Remote Service (Finland)</p>
-
-        <h5>📧 Email</h5>
-        <p>info@easytilitoimisto.fi</p>
-
-        <h5>📞 Phone</h5>
-        <p>+358 40 123 4567</p>
-      </div>
-
-      <div class="col-md-6">
-        <h5>💬 Send a Message</h5>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Jane Doe" />
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">
+        <i class="fas fa-calculator text-primary me-2"></i>Easy Tilitoimisto
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <div class="dropdown me-3">
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe me-1"></i>English
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="/en/index.html">English</a></li>
+              <li><a class="dropdown-item" href="/fi/index.html">Suomi</a></li>
+            </ul>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com" />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control" id="message" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn-success">Send Message</button>
-        </form>
+          <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
       </div>
     </div>
+  </nav>
+
+  <!-- Contact Header -->
+  <header class="contact-header bg-primary text-white py-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="display-4 fw-bold mb-3">Get in Touch</h1>
+          <p class="lead mb-0">We're here to help with your accounting needs</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="bg-light py-3">
+    <div class="container">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Contact Sections -->
+  <div class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="fw-bold mb-4">Send us a message</h2>
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="name" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <select class="form-select" id="subject" required>
+                      <option value="" selected disabled>Select a topic</option>
+                      <option value="consultation">Free Consultation</option>
+                      <option value="bookkeeping">Bookkeeping Inquiry</option>
+                      <option value="tax">Tax Questions</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a subject</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                    <div class="invalid-feedback">Please enter your message</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="consent" required>
+                      <label class="form-check-label" for="consent">
+                        I agree to the <a href="privacy.html">privacy policy</a> *
+                      </label>
+                      <div class="invalid-feedback">You must agree before submitting</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary px-4 py-2">
+                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="fw-bold mb-4">Contact Information</h2>
+              
+              <!-- Contact Methods -->
+              <div class="d-flex mb-4">
+                <div class="me-4 text-primary">
+                  <i class="fas fa-map-marker-alt fa-2x"></i>
+                </div>
+                <div>
+                  <h3 class="h5">Our Office</h3>
+                  <p class="mb-0">Accounting Street 123<br>00100 Helsinki, Finland</p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-4 text-primary">
+                  <i class="fas fa-phone-alt fa-2x"></i>
+                </div>
+                <div>
+                  <h3 class="h5">Phone</h3>
+                  <p class="mb-0">
+                    <a href="tel:+358123456789" class="text-decoration-none">+358 12 345 6789</a><br>
+                    Mon-Fri: 9:00 - 17:00
+                  </p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-4 text-primary">
+                  <i class="fas fa-envelope fa-2x"></i>
+                </div>
+                <div>
+                  <h3 class="h5">Email</h3>
+                  <p class="mb-0">
+                    <a href="mailto:info@easytilitoimisto.fi" class="text-decoration-none">info@easytilitoimisto.fi</a><br>
+                    Typically reply within 24h
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Embedded Map -->
+              <div class="mt-4 rounded overflow-hidden" style="height: 250px;">
+                <div id="map" class="h-100"></div>
+              </div>
+              
+              <!-- Social Links -->
+              <div class="mt-4 pt-2">
+                <h3 class="h5 mb-3">Follow Us</h3>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- FAQ Banner -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="d-inline-block bg-white p-4 rounded shadow-sm">
+            <h2 class="h4 mb-3">Frequently Asked Questions</h2>
+            <p class="mb-4">Check our <a href="faq.html">FAQ page</a> for quick answers to common questions about our services.</p>
+            <a href="faq.html" class="btn btn-outline-primary">
+              <i class="fas fa-question-circle me-2"></i>Visit FAQ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h3 class="h5 mb-3"><i class="fas fa-calculator text-primary me-2"></i>Easy Tilitoimisto</h3>
+          <p>Modern accounting solutions for Finnish businesses.</p>
+          <div class="mt-3">
+            <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <h3 class="h5 mb-3">Quick Links</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                <li class="mb-2"><a href="pricing.html" class="text-white text-decoration-none">Pricing</a></li>
+                <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <h3 class="h5 mb-3">Contact</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> +358 12 345 6789</li>
+                <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> info@example.com</li>
+                <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Helsinki, Finland</li>
+              </ul>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+              <h3 class="h5 mb-3">Newsletter</h3>
+              <form>
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" placeholder="Your email" aria-label="Email" required>
+                  <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">© <span id="currentYear">2023</span> Easy Tilitoimisto. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">Business ID: 1234567-8</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary rounded-circle shadow back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/script.js"></script>
+  
+  <!-- Dynamic Year -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  
+  <!-- Contact Form Validation -->
+  <script>
+    // Example form validation
+    (() => {
+      'use strict'
+      const form = document.getElementById('contactForm')
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })()
+  </script>
+  
+  <!-- Mapbox Implementation -->
+  <script>
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN'; // Replace with your token
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [24.941, 60.169], // Helsinki coordinates
+      zoom: 13
+    });
+    
+    // Add marker
+    new mapboxgl.Marker({ color: '#0d6efd' })
+      .setLngLat([24.941, 60.169])
+      .setPopup(new mapboxgl.Popup().setHTML('<h6>Easy Tilitoimisto</h6><p>Accounting Street 123</p>'))
+      .addTo(map);
+  </script>
 </body>
 </html>
